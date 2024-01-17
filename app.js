@@ -12,6 +12,16 @@ const app = Vue.createApp({
       quote: "I'm Batman",
       author: 'Bruce Wayne'
     }
+  },
+  methods: {
+    changeQuote() {
+      console.log('changeQuote')
+      this.author = 'Clark Kent'
+      this.capitalizeText()
+    },
+    capitalizeText() {
+      this.quote = this.quote.toUpperCase()
+    }
   }
 })
 
